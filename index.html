@@ -90,6 +90,136 @@
             text-transform: uppercase;
             letter-spacing: 0.1em;
         }
+
+        /* === ANIMATIONS === */
+        .reveal {
+            opacity: 0;
+            transform: translateY(40px);
+            transition: opacity 0.7s cubic-bezier(0.25, 0.46, 0.45, 0.94), transform 0.7s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+        }
+        .reveal.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        .reveal-left {
+            opacity: 0;
+            transform: translateX(-50px);
+            transition: opacity 0.7s cubic-bezier(0.25, 0.46, 0.45, 0.94), transform 0.7s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+        }
+        .reveal-left.visible {
+            opacity: 1;
+            transform: translateX(0);
+        }
+        .reveal-right {
+            opacity: 0;
+            transform: translateX(50px);
+            transition: opacity 0.7s cubic-bezier(0.25, 0.46, 0.45, 0.94), transform 0.7s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+        }
+        .reveal-right.visible {
+            opacity: 1;
+            transform: translateX(0);
+        }
+        .reveal-scale {
+            opacity: 0;
+            transform: scale(0.85);
+            transition: opacity 0.6s cubic-bezier(0.25, 0.46, 0.45, 0.94), transform 0.6s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+        }
+        .reveal-scale.visible {
+            opacity: 1;
+            transform: scale(1);
+        }
+        .reveal-stagger > * {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: opacity 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94), transform 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+        }
+        .reveal-stagger.visible > * {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        /* Nav slide down */
+        #main-nav {
+            animation: slideDown 0.6s ease forwards;
+        }
+        @keyframes slideDown {
+            from { opacity: 0; transform: translateY(-20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        /* Hero fade */
+        .hero-fade {
+            animation: heroFadeIn 0.8s ease forwards;
+        }
+        @keyframes heroFadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        /* Float for WhatsApp */
+        @keyframes float {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-8px); }
+        }
+        .whatsapp-float {
+            animation: float 2.5s ease-in-out infinite;
+        }
+
+        /* Counter pulse */
+        @keyframes countPulse {
+            0% { transform: scale(1); }
+            50% { transform: scale(1.05); text-shadow: 0 0 20px rgba(212, 175, 55, 0.3); }
+            100% { transform: scale(1); }
+        }
+        .count-animate {
+            animation: countPulse 2s ease-in-out infinite;
+        }
+        .count-animate:nth-child(2) { animation-delay: 0.4s; }
+        .count-animate:nth-child(3) { animation-delay: 0.8s; }
+        .count-animate:nth-child(4) { animation-delay: 1.2s; }
+        .count-animate:nth-child(5) { animation-delay: 1.6s; }
+
+        /* Gold shimmer */
+        @keyframes shimmer {
+            0% { background-position: -200% center; }
+            100% { background-position: 200% center; }
+        }
+        .shimmer {
+            background: linear-gradient(90deg, #d4af37 0%, #f5c542 50%, #d4af37 100%);
+            background-size: 200% auto;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            animation: shimmer 3s linear infinite;
+        }
+
+        /* Chat pulse */
+        @keyframes chatPulse {
+            0%, 100% { box-shadow: 0 0 0 0 rgba(212, 175, 55, 0.4); }
+            50% { box-shadow: 0 0 0 10px rgba(212, 175, 55, 0); }
+        }
+        .chat-glow {
+            animation: chatPulse 2s ease-in-out infinite;
+        }
+
+        /* Gradient shift */
+        @keyframes gradientShift {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+        }
+        .gradient-shift {
+            background-size: 200% 200%;
+            animation: gradientShift 4s ease infinite;
+        }
+
+        /* Glow expand */
+        @keyframes glowExpand {
+            0% { transform: scale(1); opacity: 0.6; }
+            100% { transform: scale(1.2); opacity: 0; }
+        }
+        .glow-ring {
+            animation: glowExpand 2s ease-out infinite;
+        }
     </style>
 </head>
 <body class="font-sans antialiased overflow-x-hidden">
@@ -125,7 +255,7 @@
 
     <!-- HERO -->
     <header class="relative min-h-screen flex items-center pt-24 overflow-hidden">
-        <video autoplay muted loop playsinline class="absolute inset-0 w-full h-full object-cover">
+        <video autoplay muted loop playsinline class="absolute inset-0 w-full h-full object-cover" style="animation: heroFadeIn 1.5s ease forwards;">
             <source src="https://res.cloudinary.com/dadofd9d2/video/upload/v1778230905/cinematic-golden-hour-video-of-a-professional-plum_lym5jh.mp4" type="video/mp4">
         </video>
         <div class="absolute inset-0 bg-navy-950/20"></div>
@@ -134,21 +264,21 @@
         <div class="absolute bottom-[-10%] left-[-10%] w-[200px] sm:w-[300px] lg:w-[400px] h-[200px] sm:h-[300px] lg:h-[400px] bg-gold/3 rounded-full blur-[80px] lg:blur-[100px]"></div>
 
         <div class="max-w-5xl mx-auto px-6 text-center relative z-10">
-            <div class="inline-flex items-center gap-2 px-4 py-1.5 mb-8 rounded-full bg-gold/10 border border-gold/20">
+            <div class="hero-animate inline-flex items-center gap-2 px-4 py-1.5 mb-8 rounded-full bg-gold/10 border border-gold/20">
                 <span class="flex h-2 w-2 rounded-full bg-gold animate-pulse"></span>
                 <span class="text-[10px] font-bold text-gold uppercase tracking-[0.2em]">Plumbing Lead Generation Agency</span>
             </div>
 
-            <h1 class="font-display text-3xl sm:text-5xl md:text-6xl lg:text-7xl font-black leading-[1.05] mb-6">
+            <h1 class="hero-animate font-display text-3xl sm:text-5xl md:text-6xl lg:text-7xl font-black leading-[1.05] mb-6">
                 Scale Your Plumbing Business<br>
                 <span class="text-gradient">Across USA & Canada</span>
             </h1>
 
-            <p class="text-base lg:text-lg text-slate-400 mb-10 max-w-3xl mx-auto leading-relaxed">
+            <p class="hero-animate text-base lg:text-lg text-slate-400 mb-10 max-w-3xl mx-auto leading-relaxed">
                 We help plumbing companies generate qualified leads through Google Ads, Bing Ads, Meta Ads, SEO, AI chatbots, and conversion-focused websites.
             </p>
 
-            <div class="flex flex-col sm:flex-row gap-4 justify-center mb-14">
+            <div class="hero-animate flex flex-col sm:flex-row gap-4 justify-center mb-14">
                 <a href="#contact" class="px-8 py-4 bg-gold text-navy-950 rounded-xl font-black text-base shadow-2xl shadow-gold/25 hover:shadow-gold/40 transition-all hover:-translate-y-0.5 text-center">
                     Get Free Strategy Call
                 </a>
@@ -158,7 +288,7 @@
             </div>
 
             <!-- Trust Bar -->
-            <div class="pt-8 border-t border-white/5">
+            <div class="hero-animate pt-8 border-t border-white/5">
                 <div class="trust-grid mb-4">
                     <div class="trust-item"><i class="fab fa-google text-gold text-lg"></i> Google Ads</div>
                     <div class="trust-item"><i class="fab fa-microsoft text-gold text-lg"></i> Microsoft Ads</div>
@@ -178,13 +308,13 @@
         <img src="https://res.cloudinary.com/dadofd9d2/image/upload/v1778234301/image-1117776208083639_pjenag.jpg" alt="" class="absolute inset-0 w-full h-full object-cover opacity-20 pointer-events-none">
         <div class="absolute inset-0 bg-navy-950/20"></div>
         <div class="max-w-6xl mx-auto px-6 relative z-10">
-            <div class="text-center mb-14">
+            <div data-reveal="fade-up" class="text-center mb-14">
                 <h2 class="font-display text-3xl lg:text-5xl font-bold mb-4">
                     Struggling To Get Consistent <span class="text-gradient">Plumbing Leads?</span>
                 </h2>
             </div>
 
-            <div class="grid lg:grid-cols-2 gap-0 rounded-3xl overflow-hidden border border-white/10">
+            <div data-reveal="stagger" class="grid lg:grid-cols-2 gap-0 rounded-3xl overflow-hidden border border-white/10">
                 <!-- Pain Points -->
                 <div class="p-6 sm:p-8 lg:p-12 bg-navy-900/80">
                     <h3 class="text-sm font-bold mb-6 sm:mb-8 text-slate-500 uppercase tracking-widest">Common Pain Points</h3>
@@ -243,14 +373,14 @@
         <img src="https://res.cloudinary.com/dadofd9d2/image/upload/v1778231158/wide-angle-real-estate-photography-style-shot-of-a_e5f43x.jpg" alt="" class="absolute inset-0 w-full h-full object-cover opacity-40 pointer-events-none">
         <div class="absolute inset-0 bg-navy-950/40"></div>
         <div class="max-w-7xl mx-auto px-6 relative z-10">
-            <div class="text-center mb-16">
+            <div data-reveal="fade-up" class="text-center mb-16">
                 <h2 class="font-display text-3xl lg:text-5xl font-bold mb-4">
                     Our <span class="text-gradient">Services</span>
                 </h2>
                 <p class="text-slate-400 max-w-2xl mx-auto">Everything you need to generate, capture, and convert plumbing leads at scale.</p>
             </div>
 
-            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+            <div data-reveal="stagger" class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
                 <!-- 1. Google Ads -->
                 <div class="glass-card rounded-2xl p-6 sm:p-8 hover-gold">
                     <div class="w-12 sm:w-14 h-12 sm:h-14 rounded-xl bg-gold/10 flex items-center justify-center text-xl sm:text-2xl mb-5 sm:mb-6 text-gold">
@@ -344,13 +474,13 @@
         <img src="https://res.cloudinary.com/dadofd9d2/image/upload/v1778234651/cinematic-dark-navy-abstract-background-with-subtl_ekcoap.jpg" alt="" class="absolute inset-0 w-full h-full object-cover opacity-15 pointer-events-none">
         <div class="absolute inset-0 bg-navy-950/15"></div>
         <div class="max-w-6xl mx-auto px-6 relative z-10">
-            <div class="text-center mb-14">
+            <div data-reveal="fade-up" class="text-center mb-14">
                 <h2 class="font-display text-3xl lg:text-5xl font-bold mb-4">
                     Why Plumbing Companies <span class="text-gradient">Work With Us</span>
                 </h2>
             </div>
 
-            <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-5">
+            <div data-reveal="stagger" class="grid sm:grid-cols-2 lg:grid-cols-4 gap-5">
                 <div class="glass-card rounded-xl p-6 text-center hover-gold">
                     <div class="w-12 h-12 rounded-lg bg-gold/10 flex items-center justify-center text-xl text-gold mx-auto mb-4">
                         <i class="fas fa-bullseye"></i>
@@ -417,7 +547,7 @@
         <div class="absolute inset-0 bg-navy-950/40"></div>
         <div class="absolute inset-0 bg-gradient-to-r from-gold/5 via-transparent to-gold/5"></div>
         <div class="max-w-6xl mx-auto px-6 relative z-10">
-            <div class="text-center mb-14">
+            <div data-reveal="fade-up" class="text-center mb-14">
                 <h2 class="font-display text-3xl lg:text-5xl font-bold mb-4">
                     Results That <span class="text-gradient">Speak</span>
                 </h2>
@@ -426,25 +556,25 @@
                 </p>
             </div>
 
-            <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-5 gap-3 sm:gap-6">
+            <div data-reveal="stagger" class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-5 gap-3 sm:gap-6">
                 <div class="glass-card rounded-2xl p-6 lg:p-8 text-center">
-                    <p class="text-3xl lg:text-4xl font-black font-display text-gold mb-2">3.2x</p>
+                    <p class="counter-value text-3xl lg:text-4xl font-black font-display text-gold mb-2">3.2x</p>
                     <p class="text-[10px] uppercase tracking-widest text-slate-400 font-bold">Increase Qualified Calls</p>
                 </div>
                 <div class="glass-card rounded-2xl p-6 lg:p-8 text-center">
-                    <p class="text-3xl lg:text-4xl font-black font-display text-gold mb-2">-42%</p>
+                    <p class="counter-value text-3xl lg:text-4xl font-black font-display text-gold mb-2">-42%</p>
                     <p class="text-[10px] uppercase tracking-widest text-slate-400 font-bold">Lower Cost Per Lead</p>
                 </div>
                 <div class="glass-card rounded-2xl p-6 lg:p-8 text-center">
-                    <p class="text-3xl lg:text-4xl font-black font-display text-gold mb-2">2.7x</p>
+                    <p class="counter-value text-3xl lg:text-4xl font-black font-display text-gold mb-2">2.7x</p>
                     <p class="text-[10px] uppercase tracking-widest text-slate-400 font-bold">Improve Booking Rate</p>
                 </div>
                 <div class="glass-card rounded-2xl p-6 lg:p-8 text-center">
-                    <p class="text-3xl lg:text-4xl font-black font-display text-gold mb-2">24/7</p>
+                    <p class="counter-value text-3xl lg:text-4xl font-black font-display text-gold mb-2">24/7</p>
                     <p class="text-[10px] uppercase tracking-widest text-slate-400 font-bold">AI Lead Response</p>
                 </div>
                 <div class="glass-card rounded-2xl p-6 lg:p-8 text-center">
-                    <p class="text-3xl lg:text-4xl font-black font-display text-gold mb-2">1.8s</p>
+                    <p class="counter-value text-3xl lg:text-4xl font-black font-display text-gold mb-2">1.8s</p>
                     <p class="text-[10px] uppercase tracking-widest text-slate-400 font-bold">Faster Website Speed</p>
                 </div>
             </div>
@@ -457,7 +587,7 @@
         <div class="absolute inset-0 bg-navy-950/15"></div>
         <div class="max-w-7xl mx-auto px-6 relative z-10">
             <div class="grid lg:grid-cols-2 gap-8 sm:gap-12 lg:gap-16 items-center">
-                <div>
+                <div data-reveal="left">
                     <div class="inline-flex items-center gap-2 px-3 py-1 mb-6 rounded-full bg-gold/10 border border-gold/20">
                         <span class="text-[10px] font-bold text-gold uppercase tracking-[0.2em]">Key Differentiator</span>
                     </div>
@@ -518,8 +648,8 @@
                 </div>
 
                 <!-- Chat Demo -->
-                <div class="relative">
-                    <div class="bg-navy-800/80 rounded-[2rem] border border-white/5 shadow-2xl overflow-hidden max-w-[320px] sm:max-w-[400px] mx-auto relative z-10 glow-gold">
+                <div data-reveal="right" class="relative">
+                    <div class="bg-navy-800/80 rounded-[2rem] border border-white/5 shadow-2xl overflow-hidden max-w-[320px] sm:max-w-[400px] mx-auto relative z-10 glow-gold chat-glow">
                         <div class="bg-gradient-to-r from-gold to-gold-light p-5 flex items-center gap-4">
                             <div class="w-11 h-11 rounded-full bg-white/20 backdrop-blur flex items-center justify-center">
                                 <i class="fas fa-robot text-white text-xl"></i>
@@ -564,14 +694,16 @@
         <div class="absolute inset-0 bg-navy-950/30"></div>
         <div class="absolute top-0 left-0 w-full h-full bg-[radial-gradient(ellipse_at_center,rgba(212,175,55,0.03)_0%,transparent_70%)] pointer-events-none"></div>
         <div class="max-w-5xl mx-auto px-6 text-center relative z-10">
-            <h2 class="font-display text-3xl lg:text-5xl font-bold mb-6">
-                Serving Plumbing Businesses Across <span class="text-gradient">USA & Canada</span>
-            </h2>
-            <p class="text-slate-400 mb-12 max-w-2xl mx-auto">
-                We help residential and commercial plumbing companies dominate their local markets with targeted digital campaigns.
-            </p>
+            <div data-reveal="fade-up">
+                <h2 class="font-display text-3xl lg:text-5xl font-bold mb-6">
+                    Serving Plumbing Businesses Across <span class="text-gradient">USA & Canada</span>
+                </h2>
+                <p class="text-slate-400 mb-12 max-w-2xl mx-auto">
+                    We help residential and commercial plumbing companies dominate their local markets with targeted digital campaigns.
+                </p>
+            </div>
 
-            <div class="grid sm:grid-cols-2 lg:grid-cols-5 gap-4">
+            <div data-reveal="stagger" class="grid sm:grid-cols-2 lg:grid-cols-5 gap-4">
                 <div class="glass-card rounded-xl px-4 sm:px-5 py-5 sm:py-6">
                     <i class="fas fa-house-chimney text-xl sm:text-2xl text-gold mb-2 sm:mb-3"></i>
                     <h4 class="text-[10px] sm:text-xs font-bold uppercase tracking-wider">Residential Plumbers</h4>
@@ -601,13 +733,13 @@
         <img src="https://res.cloudinary.com/dadofd9d2/image/upload/v1778235029/cinematic-dark-navy-abstract-background-with-subtl_2_q5anr6.jpg" alt="" class="absolute inset-0 w-full h-full object-cover opacity-15 pointer-events-none">
         <div class="absolute inset-0 bg-navy-950/20"></div>
         <div class="max-w-6xl mx-auto px-6 relative z-10">
-            <div class="text-center mb-16">
+            <div data-reveal="fade-up" class="text-center mb-16">
                 <h2 class="font-display text-3xl lg:text-5xl font-bold mb-4">
                     Simple <span class="text-gradient">4-Step</span> Process
                 </h2>
             </div>
 
-            <div class="grid sm:grid-cols-2 md:grid-cols-4 gap-6 md:gap-8">
+            <div data-reveal="stagger" class="grid sm:grid-cols-2 md:grid-cols-4 gap-6 md:gap-8">
                 <div class="relative pt-14">
                     <div class="absolute top-0 left-0 text-6xl font-display font-black text-white/5">01</div>
                     <div class="w-12 h-12 rounded-xl bg-gold/10 border border-gold/20 flex items-center justify-center text-gold mb-5">
@@ -650,7 +782,7 @@
         <div class="absolute inset-0 bg-navy-950/30"></div>
         <div class="absolute inset-0 bg-gradient-to-br from-gold/5 via-transparent to-gold/5"></div>
         <div class="max-w-4xl mx-auto px-6 relative z-10">
-            <div class="text-center mb-12">
+            <div data-reveal="fade-up" class="text-center mb-12">
                 <h2 class="font-display text-3xl lg:text-5xl font-bold mb-4">
                     Ready To Generate More <span class="text-gradient">Plumbing Leads?</span>
                 </h2>
@@ -659,7 +791,7 @@
                 </p>
             </div>
 
-            <div class="max-w-2xl mx-auto p-6 sm:p-8 lg:p-12 rounded-[2rem] border-gold relative" style="background: rgba(10, 20, 40, 0.7); backdrop-filter: blur(12px);">
+            <div data-reveal="scale" class="max-w-2xl mx-auto p-6 sm:p-8 lg:p-12 rounded-[2rem] border-gold relative" style="background: rgba(10, 20, 40, 0.7); backdrop-filter: blur(12px);">
                 <div class="absolute -top-10 -left-10 w-32 h-32 bg-gold/10 rounded-full blur-[60px]"></div>
 
                 <form onsubmit="handleForm(event)" class="space-y-5 relative" id="leadForm">
@@ -720,12 +852,12 @@
     </section>
 
     <!-- WHATSAPP BUTTON -->
-    <a href="https://api.whatsapp.com/send/?phone=919056544487&text&type=phone_number&app_absent=0" target="_blank" rel="noopener noreferrer" class="fixed bottom-6 right-6 z-[100] w-14 h-14 bg-[#25D366] rounded-full flex items-center justify-center text-white text-3xl shadow-2xl hover:scale-110 active:scale-95 transition-all duration-300 hover:shadow-[#25D366]/40 shadow-black/30">
+    <a href="https://api.whatsapp.com/send/?phone=919056544487&text&type=phone_number&app_absent=0" target="_blank" rel="noopener noreferrer" class="whatsapp-float fixed bottom-6 right-6 z-[100] w-14 h-14 bg-[#25D366] rounded-full flex items-center justify-center text-white text-3xl shadow-2xl hover:scale-110 active:scale-95 transition-all duration-300 hover:shadow-[#25D366]/40 shadow-black/30">
         <i class="fab fa-whatsapp"></i>
     </a>
 
     <!-- FOOTER -->
-    <footer class="py-10 sm:py-12 border-t border-white/5 px-4 sm:px-6">
+    <footer data-reveal="fade-up" class="py-10 sm:py-12 border-t border-white/5 px-4 sm:px-6">
         <div class="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-center gap-6 sm:gap-8">
             <div class="flex items-center gap-3">
                 <img src="https://res.cloudinary.com/dadofd9d2/image/upload/v1777959499/Damnart_new_and_final_logo_kpvdvr.png" alt="Digimarketing Art" class="w-8 h-8 rounded-lg object-cover">
@@ -746,7 +878,71 @@
     </footer>
 
     <script>
-        // Mobile Menu
+        // === SCROLL REVEAL SYSTEM ===
+        function initReveal() {
+            const revealEls = document.querySelectorAll('[data-reveal]');
+            if (!revealEls.length) return;
+
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        const el = entry.target;
+                        const delay = el.dataset.revealDelay || 0;
+                        const type = el.dataset.reveal || 'fade-up';
+
+                        let baseClass = 'reveal';
+                        if (type === 'left') baseClass = 'reveal-left';
+                        else if (type === 'right') baseClass = 'reveal-right';
+                        else if (type === 'scale') baseClass = 'reveal-scale';
+                        else if (type === 'stagger') baseClass = 'reveal-stagger';
+                        else baseClass = 'reveal';
+
+                        el.classList.add(baseClass);
+
+                        if (type === 'stagger') {
+                            const items = el.children;
+                            setTimeout(() => {
+                                el.classList.add('visible');
+                                Array.from(items).forEach((item, i) => {
+                                    item.style.transitionDelay = `${i * 0.1}s`;
+                                });
+                            }, delay);
+                        } else {
+                            el.style.transitionDelay = `${delay}ms`;
+                            setTimeout(() => el.classList.add('visible'), 50);
+                        }
+
+                        observer.unobserve(el);
+                    }
+                });
+            }, { threshold: 0.1, rootMargin: '0px 0px -50px 0px' });
+
+            revealEls.forEach(el => observer.observe(el));
+        }
+
+        // === HERO AUTO ANIMATION ===
+        function animateHero() {
+            const els = document.querySelectorAll('.hero-animate');
+            els.forEach((el, i) => {
+                el.style.opacity = '0';
+                el.style.transform = 'translateY(20px)';
+                setTimeout(() => {
+                    el.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
+                    el.style.opacity = '1';
+                    el.style.transform = 'translateY(0)';
+                }, 200 + i * 150);
+            });
+        }
+
+        // === COUNTER PULSE ===
+        function initCounters() {
+            const counters = document.querySelectorAll('.counter-value');
+            counters.forEach((el, i) => {
+                el.style.animationDelay = `${i * 0.3}s`;
+            });
+        }
+
+        // === MOBILE MENU ===
         function toggleMobileMenu() {
             const menu = document.getElementById('mobile-menu');
             const icon = document.querySelector('#mobile-menu-btn i');
@@ -755,7 +951,7 @@
             icon.classList.toggle('fa-times');
         }
 
-        // Nav Scroll Effect
+        // === NAV SCROLL ===
         window.addEventListener('scroll', () => {
             const nav = document.getElementById('main-nav');
             if (window.scrollY > 80) {
@@ -765,7 +961,6 @@
                 nav.classList.remove('bg-navy-950/90', 'backdrop-blur-lg', 'py-1');
                 nav.classList.add('py-2', 'sm:py-3');
             }
-            // Close mobile menu on scroll
             const menu = document.getElementById('mobile-menu');
             const icon = document.querySelector('#mobile-menu-btn i');
             if (!menu.classList.contains('hidden')) {
@@ -775,29 +970,26 @@
             }
         });
 
-        // Form Handling
+        // === FORM HANDLING ===
         function handleForm(e) {
             e.preventDefault();
             const form = document.getElementById('leadForm');
             const success = document.getElementById('success');
-
             form.style.filter = 'blur(4px)';
             form.style.pointerEvents = 'none';
-
             setTimeout(() => {
                 success.classList.remove('hidden');
                 success.classList.add('flex');
             }, 1500);
         }
 
-        // Demo Chat
+        // === DEMO CHAT ===
         const chat = document.getElementById('demo-chat');
         const chatMessages = [
             { type: 'bot', text: 'I see you\'re looking at burst pipe repair. Is this an emergency?' },
             { type: 'user', text: 'Yes, water is leaking everywhere!' },
             { type: 'bot', text: 'Understood. I have a technician 3 miles away. Can I schedule an immediate dispatch?' },
         ];
-
         let msgIndex = 0;
         function startChat() {
             if (msgIndex < chatMessages.length) {
@@ -817,15 +1009,20 @@
                 }, 2500);
             }
         }
-
-        // Observer for chat
-        const observer = new IntersectionObserver((entries) => {
+        const chatObserver = new IntersectionObserver((entries) => {
             if (entries[0].isIntersecting) {
                 startChat();
-                observer.unobserve(entries[0].target);
+                chatObserver.unobserve(entries[0].target);
             }
         });
-        observer.observe(document.getElementById('ai-engine'));
+        chatObserver.observe(document.getElementById('ai-engine'));
+
+        // === BOOT ===
+        document.addEventListener('DOMContentLoaded', () => {
+            animateHero();
+            initCounters();
+            initReveal();
+        });
     </script>
 </body>
 </html>

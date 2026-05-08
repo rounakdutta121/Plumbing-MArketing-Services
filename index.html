@@ -1,0 +1,804 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DigiMarketing Art | Plumbing Lead Generation Agency</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        navy: {
+                            950: '#070d1a',
+                            900: '#0a1428',
+                            800: '#0f1f3d',
+                            700: '#132a4f',
+                        },
+                        gold: {
+                            DEFAULT: '#d4af37',
+                            light: '#f5c542',
+                            dark: '#b8962e',
+                            muted: '#3d2a0a',
+                        }
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                        display: ['Space Grotesk', 'sans-serif'],
+                    },
+                }
+            }
+        }
+    </script>
+
+    <style>
+        body {
+            background-color: #070d1a;
+            color: #e2e8f0;
+        }
+        .glass {
+            background: rgba(15, 31, 61, 0.6);
+            backdrop-filter: blur(16px);
+            border: 1px solid rgba(255, 255, 255, 0.06);
+        }
+        .glass-card {
+            background: rgba(15, 31, 61, 0.4);
+            backdrop-filter: blur(8px);
+            border: 1px solid rgba(255, 255, 255, 0.05);
+        }
+        .text-gradient {
+            background: linear-gradient(135deg, #d4af37 0%, #f5c542 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        .border-gold {
+            border: 1px solid transparent;
+            background: linear-gradient(to right, rgba(15,31,61,0.8), rgba(15,31,61,0.8)) padding-box,
+                        linear-gradient(135deg, #d4af37, #f5c542) border-box;
+        }
+        .glow-gold {
+            box-shadow: 0 0 30px rgba(212, 175, 55, 0.15);
+        }
+        .hover-gold {
+            transition: all 0.3s ease;
+        }
+        .hover-gold:hover {
+            border-color: rgba(212, 175, 55, 0.3);
+            box-shadow: 0 0 30px rgba(212, 175, 55, 0.08);
+        }
+        ::-webkit-scrollbar { width: 6px; }
+        ::-webkit-scrollbar-track { background: #070d1a; }
+        ::-webkit-scrollbar-thumb { background: #d4af37; border-radius: 10px; }
+        .trust-grid {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 2rem;
+            align-items: center;
+        }
+        .trust-item {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            font-size: 0.75rem;
+            font-weight: 600;
+            color: rgba(255,255,255,0.5);
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+        }
+    </style>
+</head>
+<body class="font-sans antialiased overflow-x-hidden">
+
+    <!-- NAV -->
+    <nav class="fixed w-full z-[100] top-0 left-0 py-3 px-4 lg:px-12 transition-all duration-500" id="main-nav">
+        <div class="max-w-7xl mx-auto glass rounded-2xl px-6 py-3 flex items-center justify-between">
+            <a href="#" class="flex items-center gap-3">
+                <img src="https://res.cloudinary.com/dadofd9d2/image/upload/v1777959499/Damnart_new_and_final_logo_kpvdvr.png" alt="Digimarketing Art" class="w-10 h-10 rounded-lg object-cover">
+                <span class="font-display text-lg font-bold tracking-tight">Digimarketing <span class="text-gold">Art</span></span>
+            </a>
+            <div class="hidden md:flex items-center gap-8 text-xs font-bold uppercase tracking-widest text-slate-400">
+                <a href="#services" class="hover:text-gold transition-colors">Services</a>
+                <a href="#why-us" class="hover:text-gold transition-colors">Why Us</a>
+                <a href="#process" class="hover:text-gold transition-colors">Process</a>
+                <a href="#contact" class="hover:text-gold transition-colors">Contact</a>
+            </div>
+            <a href="#contact" class="hidden sm:block px-5 py-2.5 bg-gold text-navy-950 rounded-lg font-bold text-xs uppercase hover:bg-gold-light transition-all transform hover:scale-105 active:scale-95 shadow-lg shadow-gold/20">
+                Book Consultation
+            </a>
+            <button class="md:hidden text-2xl text-white">
+                <i class="fas fa-bars"></i>
+            </button>
+        </div>
+    </nav>
+
+    <!-- HERO -->
+    <header class="relative min-h-screen flex items-center pt-24 overflow-hidden">
+        <video autoplay muted loop playsinline class="absolute inset-0 w-full h-full object-cover hidden md:block">
+            <source src="https://res.cloudinary.com/dadofd9d2/video/upload/v1778230905/cinematic-golden-hour-video-of-a-professional-plum_lym5jh.mp4" type="video/mp4">
+        </video>
+        <div class="absolute inset-0 bg-navy-950/20"></div>
+        <div class="absolute inset-0 bg-gradient-to-b from-transparent via-transparent to-navy-950/80"></div>
+        <div class="absolute top-[-10%] right-[-10%] w-[600px] h-[600px] bg-gold/5 rounded-full blur-[150px]"></div>
+        <div class="absolute bottom-[-10%] left-[-10%] w-[400px] h-[400px] bg-gold/3 rounded-full blur-[100px]"></div>
+
+        <div class="max-w-5xl mx-auto px-6 text-center relative z-10">
+            <div class="inline-flex items-center gap-2 px-4 py-1.5 mb-8 rounded-full bg-gold/10 border border-gold/20">
+                <span class="flex h-2 w-2 rounded-full bg-gold animate-pulse"></span>
+                <span class="text-[10px] font-bold text-gold uppercase tracking-[0.2em]">Plumbing Lead Generation Agency</span>
+            </div>
+
+            <h1 class="font-display text-4xl sm:text-5xl lg:text-7xl font-black leading-[1.05] mb-6">
+                Scale Your Plumbing Business<br>
+                <span class="text-gradient">Across USA & Canada</span>
+            </h1>
+
+            <p class="text-base lg:text-lg text-slate-400 mb-10 max-w-3xl mx-auto leading-relaxed">
+                We help plumbing companies generate qualified leads through Google Ads, Bing Ads, Meta Ads, SEO, AI chatbots, and conversion-focused websites.
+            </p>
+
+            <div class="flex flex-col sm:flex-row gap-4 justify-center mb-14">
+                <a href="#contact" class="px-8 py-4 bg-gold text-navy-950 rounded-xl font-black text-base shadow-2xl shadow-gold/25 hover:shadow-gold/40 transition-all hover:-translate-y-0.5 text-center">
+                    Get Free Strategy Call
+                </a>
+                <a href="#contact" class="px-8 py-4 bg-navy-800 border border-white/10 text-white rounded-xl font-bold text-base hover:bg-navy-700 transition-all text-center">
+                    Book Consultation
+                </a>
+            </div>
+
+            <!-- Trust Bar -->
+            <div class="pt-8 border-t border-white/5">
+                <div class="trust-grid mb-4">
+                    <div class="trust-item"><i class="fab fa-google text-gold text-lg"></i> Google Ads</div>
+                    <div class="trust-item"><i class="fab fa-microsoft text-gold text-lg"></i> Microsoft Ads</div>
+                    <div class="trust-item"><i class="fab fa-facebook text-gold text-lg"></i> Meta</div>
+                    <div class="trust-item"><i class="fas fa-robot text-gold text-lg"></i> AI Automation</div>
+                    <div class="trust-item"><i class="fas fa-database text-gold text-lg"></i> CRM Integration</div>
+                </div>
+                <p class="text-xs text-slate-500 font-medium tracking-wider">
+                    Trusted Digital Growth Partner For Plumbing Companies Across North America
+                </p>
+            </div>
+        </div>
+    </header>
+
+    <!-- PROBLEM → SOLUTION -->
+    <section class="py-20 lg:py-28 bg-navy-900/50 relative border-y border-white/5 overflow-hidden">
+        <img src="https://res.cloudinary.com/dadofd9d2/image/upload/v1778234301/image-1117776208083639_pjenag.jpg" alt="" class="absolute inset-0 w-full h-full object-cover opacity-20 pointer-events-none">
+        <div class="absolute inset-0 bg-navy-950/20"></div>
+        <div class="max-w-6xl mx-auto px-6 relative z-10">
+            <div class="text-center mb-14">
+                <h2 class="font-display text-3xl lg:text-5xl font-bold mb-4">
+                    Struggling To Get Consistent <span class="text-gradient">Plumbing Leads?</span>
+                </h2>
+            </div>
+
+            <div class="grid lg:grid-cols-2 gap-0 rounded-3xl overflow-hidden border border-white/10">
+                <!-- Pain Points -->
+                <div class="p-8 lg:p-12 bg-navy-900/80">
+                    <h3 class="text-sm font-bold mb-8 text-slate-500 uppercase tracking-widest">Common Pain Points</h3>
+                    <ul class="space-y-5">
+                        <li class="flex gap-4 items-start">
+                            <i class="fas fa-times-circle text-red-500/70 mt-1 text-sm"></i>
+                            <p class="text-sm text-slate-300">Expensive PPC campaigns with low ROI</p>
+                        </li>
+                        <li class="flex gap-4 items-start">
+                            <i class="fas fa-times-circle text-red-500/70 mt-1 text-sm"></i>
+                            <p class="text-sm text-slate-300">Few emergency call leads</p>
+                        </li>
+                        <li class="flex gap-4 items-start">
+                            <i class="fas fa-times-circle text-red-500/70 mt-1 text-sm"></i>
+                            <p class="text-sm text-slate-300">Poor website conversion rates</p>
+                        </li>
+                        <li class="flex gap-4 items-start">
+                            <i class="fas fa-times-circle text-red-500/70 mt-1 text-sm"></i>
+                            <p class="text-sm text-slate-300">Missed leads after business hours</p>
+                        </li>
+                        <li class="flex gap-4 items-start">
+                            <i class="fas fa-times-circle text-red-500/70 mt-1 text-sm"></i>
+                            <p class="text-sm text-slate-300">Competitors outranking you locally</p>
+                        </li>
+                        <li class="flex gap-4 items-start">
+                            <i class="fas fa-times-circle text-red-500/70 mt-1 text-sm"></i>
+                            <p class="text-sm text-slate-300">No lead follow-up automation</p>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Solution -->
+                <div class="p-8 lg:p-12 bg-gradient-to-br from-navy-700/40 to-navy-800/20 relative overflow-hidden">
+                    <img src="https://res.cloudinary.com/dadofd9d2/image/upload/v1778234130/cinematic-dark-blue-abstract-digital-background-wi_ztpwmu.jpg" alt="" class="absolute inset-0 w-full h-full object-cover opacity-25 pointer-events-none">
+                    <div class="absolute inset-0 bg-navy-950/30"></div>
+                    <div class="absolute inset-0 bg-gold/5 blur-3xl"></div>
+                    <div class="relative z-10">
+                        <h3 class="text-sm font-bold mb-6 text-gold uppercase tracking-widest">Our Solution</h3>
+                        <p class="text-sm leading-relaxed text-slate-200">
+                            We build complete lead generation systems for plumbing businesses — combining paid advertising, local SEO, AI-powered automation, and high-converting landing pages.
+                        </p>
+                        <div class="mt-8 flex flex-wrap gap-3">
+                            <span class="px-3 py-1.5 bg-navy-800 rounded-full text-[10px] font-bold uppercase tracking-wider text-gold border border-gold/20">Paid Ads</span>
+                            <span class="px-3 py-1.5 bg-navy-800 rounded-full text-[10px] font-bold uppercase tracking-wider text-gold border border-gold/20">Local SEO</span>
+                            <span class="px-3 py-1.5 bg-navy-800 rounded-full text-[10px] font-bold uppercase tracking-wider text-gold border border-gold/20">AI Automation</span>
+                            <span class="px-3 py-1.5 bg-navy-800 rounded-full text-[10px] font-bold uppercase tracking-wider text-gold border border-gold/20">Conversion Pages</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SERVICES -->
+    <section id="services" class="py-20 lg:py-28 relative overflow-hidden">
+        <img src="https://res.cloudinary.com/dadofd9d2/image/upload/v1778231158/wide-angle-real-estate-photography-style-shot-of-a_e5f43x.jpg" alt="" class="absolute inset-0 w-full h-full object-cover opacity-40 pointer-events-none">
+        <div class="absolute inset-0 bg-navy-950/40"></div>
+        <div class="max-w-7xl mx-auto px-6 relative z-10">
+            <div class="text-center mb-16">
+                <h2 class="font-display text-3xl lg:text-5xl font-bold mb-4">
+                    Our <span class="text-gradient">Services</span>
+                </h2>
+                <p class="text-slate-400 max-w-2xl mx-auto">Everything you need to generate, capture, and convert plumbing leads at scale.</p>
+            </div>
+
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+                <!-- 1. Google Ads -->
+                <div class="glass-card rounded-2xl p-8 hover-gold">
+                    <div class="w-14 h-14 rounded-xl bg-gold/10 flex items-center justify-center text-2xl mb-6 text-gold">
+                        <i class="fab fa-google"></i>
+                    </div>
+                    <h3 class="text-lg font-bold mb-4">Google Ads Management</h3>
+                    <ul class="space-y-3 text-sm text-slate-400">
+                        <li class="flex items-center gap-3"><i class="fas fa-circle text-[6px] text-gold"></i> Emergency plumbing campaigns</li>
+                        <li class="flex items-center gap-3"><i class="fas fa-circle text-[6px] text-gold"></i> Call-only ads</li>
+                        <li class="flex items-center gap-3"><i class="fas fa-circle text-[6px] text-gold"></i> Local service targeting</li>
+                        <li class="flex items-center gap-3"><i class="fas fa-circle text-[6px] text-gold"></i> Conversion tracking</li>
+                        <li class="flex items-center gap-3"><i class="fas fa-circle text-[6px] text-gold"></i> ROI optimization</li>
+                    </ul>
+                </div>
+
+                <!-- 2. Bing Ads -->
+                <div class="glass-card rounded-2xl p-8 hover-gold">
+                    <div class="w-14 h-14 rounded-xl bg-gold/10 flex items-center justify-center text-2xl mb-6 text-gold">
+                        <i class="fab fa-microsoft"></i>
+                    </div>
+                    <h3 class="text-lg font-bold mb-4">Bing Ads Management</h3>
+                    <ul class="space-y-3 text-sm text-slate-400">
+                        <li class="flex items-center gap-3"><i class="fas fa-circle text-[6px] text-gold"></i> Lower CPC opportunities</li>
+                        <li class="flex items-center gap-3"><i class="fas fa-circle text-[6px] text-gold"></i> High-intent homeowner traffic</li>
+                        <li class="flex items-center gap-3"><i class="fas fa-circle text-[6px] text-gold"></i> USA & Canada audience targeting</li>
+                    </ul>
+                </div>
+
+                <!-- 3. Meta Ads -->
+                <div class="glass-card rounded-2xl p-8 hover-gold">
+                    <div class="w-14 h-14 rounded-xl bg-gold/10 flex items-center justify-center text-2xl mb-6 text-gold">
+                        <i class="fab fa-facebook"></i>
+                    </div>
+                    <h3 class="text-lg font-bold mb-4">Meta Ads</h3>
+                    <ul class="space-y-3 text-sm text-slate-400">
+                        <li class="flex items-center gap-3"><i class="fas fa-circle text-[6px] text-gold"></i> Facebook lead generation</li>
+                        <li class="flex items-center gap-3"><i class="fas fa-circle text-[6px] text-gold"></i> Retargeting campaigns</li>
+                        <li class="flex items-center gap-3"><i class="fas fa-circle text-[6px] text-gold"></i> Seasonal promotions</li>
+                        <li class="flex items-center gap-3"><i class="fas fa-circle text-[6px] text-gold"></i> Brand awareness</li>
+                    </ul>
+                </div>
+
+                <!-- 4. Website Development -->
+                <div class="glass-card rounded-2xl p-8 hover-gold">
+                    <div class="w-14 h-14 rounded-xl bg-gold/10 flex items-center justify-center text-2xl mb-6 text-gold">
+                        <i class="fas fa-code"></i>
+                    </div>
+                    <h3 class="text-lg font-bold mb-4">Website Development</h3>
+                    <ul class="space-y-3 text-sm text-slate-400">
+                        <li class="flex items-center gap-3"><i class="fas fa-circle text-[6px] text-gold"></i> Fast-loading plumbing websites</li>
+                        <li class="flex items-center gap-3"><i class="fas fa-circle text-[6px] text-gold"></i> Mobile-first design</li>
+                        <li class="flex items-center gap-3"><i class="fas fa-circle text-[6px] text-gold"></i> Conversion-focused landing pages</li>
+                        <li class="flex items-center gap-3"><i class="fas fa-circle text-[6px] text-gold"></i> Click-to-call optimization</li>
+                    </ul>
+                </div>
+
+                <!-- 5. AI Chatbots -->
+                <div class="glass-card rounded-2xl p-8 border-gold relative">
+                    <div class="absolute -top-3 -right-3 bg-gold text-navy-950 text-[9px] font-black uppercase px-3 py-1 rounded-full tracking-wider">Popular</div>
+                    <div class="w-14 h-14 rounded-xl bg-gold/20 flex items-center justify-center text-2xl mb-6 text-gold">
+                        <i class="fas fa-robot"></i>
+                    </div>
+                    <h3 class="text-lg font-bold mb-4">AI Chatbots & AI Agents</h3>
+                    <ul class="space-y-3 text-sm text-slate-400">
+                        <li class="flex items-center gap-3"><i class="fas fa-circle text-[6px] text-gold"></i> 24/7 lead response</li>
+                        <li class="flex items-center gap-3"><i class="fas fa-circle text-[6px] text-gold"></i> Appointment booking</li>
+                        <li class="flex items-center gap-3"><i class="fas fa-circle text-[6px] text-gold"></i> Automated customer qualification</li>
+                        <li class="flex items-center gap-3"><i class="fas fa-circle text-[6px] text-gold"></i> Missed-call text back systems</li>
+                    </ul>
+                </div>
+
+                <!-- 6. SEO -->
+                <div class="glass-card rounded-2xl p-8 hover-gold">
+                    <div class="w-14 h-14 rounded-xl bg-gold/10 flex items-center justify-center text-2xl mb-6 text-gold">
+                        <i class="fas fa-chart-line"></i>
+                    </div>
+                    <h3 class="text-lg font-bold mb-4">SEO Services</h3>
+                    <ul class="space-y-3 text-sm text-slate-400">
+                        <li class="flex items-center gap-3"><i class="fas fa-circle text-[6px] text-gold"></i> Local SEO</li>
+                        <li class="flex items-center gap-3"><i class="fas fa-circle text-[6px] text-gold"></i> Google Maps ranking</li>
+                        <li class="flex items-center gap-3"><i class="fas fa-circle text-[6px] text-gold"></i> Plumbing keyword targeting</li>
+                        <li class="flex items-center gap-3"><i class="fas fa-circle text-[6px] text-gold"></i> City-based landing pages</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- WHY CHOOSE US -->
+    <section id="why-us" class="py-20 lg:py-28 bg-navy-900/30 relative border-y border-white/5">
+        <div class="max-w-6xl mx-auto px-6">
+            <div class="text-center mb-14">
+                <h2 class="font-display text-3xl lg:text-5xl font-bold mb-4">
+                    Why Plumbing Companies <span class="text-gradient">Work With Us</span>
+                </h2>
+            </div>
+
+            <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-5">
+                <div class="glass-card rounded-xl p-6 text-center hover-gold">
+                    <div class="w-12 h-12 rounded-lg bg-gold/10 flex items-center justify-center text-xl text-gold mx-auto mb-4">
+                        <i class="fas fa-bullseye"></i>
+                    </div>
+                    <h4 class="text-sm font-bold mb-2">Industry-Focused Strategies</h4>
+                    <p class="text-xs text-slate-500">Built specifically for plumbing, not generic B2B.</p>
+                </div>
+                <div class="glass-card rounded-xl p-6 text-center hover-gold">
+                    <div class="w-12 h-12 rounded-lg bg-gold/10 flex items-center justify-center text-xl text-gold mx-auto mb-4">
+                        <i class="fas fa-globe-americas"></i>
+                    </div>
+                    <h4 class="text-sm font-bold mb-2">USA & Canada Targeting</h4>
+                    <p class="text-xs text-slate-500">Expertise across North American markets.</p>
+                </div>
+                <div class="glass-card rounded-xl p-6 text-center hover-gold">
+                    <div class="w-12 h-12 rounded-lg bg-gold/10 flex items-center justify-center text-xl text-gold mx-auto mb-4">
+                        <i class="fas fa-trophy"></i>
+                    </div>
+                    <h4 class="text-sm font-bold mb-2">Lead-Focused Campaigns</h4>
+                    <p class="text-xs text-slate-500">Every metric ties back to booked jobs.</p>
+                </div>
+                <div class="glass-card rounded-xl p-6 text-center hover-gold">
+                    <div class="w-12 h-12 rounded-lg bg-gold/10 flex items-center justify-center text-xl text-gold mx-auto mb-4">
+                        <i class="fas fa-brain"></i>
+                    </div>
+                    <h4 class="text-sm font-bold mb-2">AI-Powered Automation</h4>
+                    <p class="text-xs text-slate-500">24/7 lead capture and follow-up systems.</p>
+                </div>
+                <div class="glass-card rounded-xl p-6 text-center hover-gold">
+                    <div class="w-12 h-12 rounded-lg bg-gold/10 flex items-center justify-center text-xl text-gold mx-auto mb-4">
+                        <i class="fas fa-chart-simple"></i>
+                    </div>
+                    <h4 class="text-sm font-bold mb-2">Transparent Reporting</h4>
+                    <p class="text-xs text-slate-500">You see exactly where every dollar goes.</p>
+                </div>
+                <div class="glass-card rounded-xl p-6 text-center hover-gold">
+                    <div class="w-12 h-12 rounded-lg bg-gold/10 flex items-center justify-center text-xl text-gold mx-auto mb-4">
+                        <i class="fas fa-magnifying-glass-chart"></i>
+                    </div>
+                    <h4 class="text-sm font-bold mb-2">Conversion Tracking</h4>
+                    <p class="text-xs text-slate-500">Proper attribution for every lead source.</p>
+                </div>
+                <div class="glass-card rounded-xl p-6 text-center hover-gold">
+                    <div class="w-12 h-12 rounded-lg bg-gold/10 flex items-center justify-center text-xl text-gold mx-auto mb-4">
+                        <i class="fas fa-headset"></i>
+                    </div>
+                    <h4 class="text-sm font-bold mb-2">Fast Support</h4>
+                    <p class="text-xs text-slate-500">Real humans, quick responses, no runaround.</p>
+                </div>
+                <div class="glass-card rounded-xl p-6 text-center hover-gold">
+                    <div class="w-12 h-12 rounded-lg bg-gold/10 flex items-center justify-center text-xl text-gold mx-auto mb-4">
+                        <i class="fas fa-gear"></i>
+                    </div>
+                    <h4 class="text-sm font-bold mb-2">Ongoing Optimization</h4>
+                    <p class="text-xs text-slate-500">Continuous improvement of every campaign.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- RESULTS / METRICS -->
+    <section class="py-20 relative overflow-hidden">
+        <img src="https://res.cloudinary.com/dadofd9d2/image/upload/v1778231591/cinematic-golden-hour-close-up-of-a-neatly-coiled-_1_ht3g7j.jpg" alt="" class="absolute inset-0 w-full h-full object-cover  opacity-95 pointer-events-none">
+        <div class="absolute inset-0 bg-navy-950/40"></div>
+        <div class="absolute inset-0 bg-gradient-to-r from-gold/5 via-transparent to-gold/5"></div>
+        <div class="max-w-6xl mx-auto px-6 relative z-10">
+            <div class="text-center mb-14">
+                <h2 class="font-display text-3xl lg:text-5xl font-bold mb-4">
+                    Results That <span class="text-gradient">Speak</span>
+                </h2>
+                <p class="text-slate-400">
+                    Generate More Emergency Plumbing Leads Without Wasting Ad Spend
+                </p>
+            </div>
+
+            <div class="grid grid-cols-2 lg:grid-cols-5 gap-6">
+                <div class="glass-card rounded-2xl p-6 lg:p-8 text-center">
+                    <p class="text-3xl lg:text-4xl font-black font-display text-gold mb-2">3.2x</p>
+                    <p class="text-[10px] uppercase tracking-widest text-slate-400 font-bold">Increase Qualified Calls</p>
+                </div>
+                <div class="glass-card rounded-2xl p-6 lg:p-8 text-center">
+                    <p class="text-3xl lg:text-4xl font-black font-display text-gold mb-2">-42%</p>
+                    <p class="text-[10px] uppercase tracking-widest text-slate-400 font-bold">Lower Cost Per Lead</p>
+                </div>
+                <div class="glass-card rounded-2xl p-6 lg:p-8 text-center">
+                    <p class="text-3xl lg:text-4xl font-black font-display text-gold mb-2">2.7x</p>
+                    <p class="text-[10px] uppercase tracking-widest text-slate-400 font-bold">Improve Booking Rate</p>
+                </div>
+                <div class="glass-card rounded-2xl p-6 lg:p-8 text-center">
+                    <p class="text-3xl lg:text-4xl font-black font-display text-gold mb-2">24/7</p>
+                    <p class="text-[10px] uppercase tracking-widest text-slate-400 font-bold">AI Lead Response</p>
+                </div>
+                <div class="glass-card rounded-2xl p-6 lg:p-8 text-center">
+                    <p class="text-3xl lg:text-4xl font-black font-display text-gold mb-2">1.8s</p>
+                    <p class="text-[10px] uppercase tracking-widest text-slate-400 font-bold">Faster Website Speed</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- AI AUTOMATION SECTION -->
+    <section id="ai-engine" class="py-20 lg:py-28 bg-navy-900/50 relative border-y border-white/5 overflow-hidden">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="grid lg:grid-cols-2 gap-16 items-center">
+                <div>
+                    <div class="inline-flex items-center gap-2 px-3 py-1 mb-6 rounded-full bg-gold/10 border border-gold/20">
+                        <span class="text-[10px] font-bold text-gold uppercase tracking-[0.2em]">Key Differentiator</span>
+                    </div>
+                    <h2 class="font-display text-3xl lg:text-5xl font-bold mb-6">
+                        Never Miss A <span class="text-gradient">Plumbing Lead</span> Again
+                    </h2>
+                    <p class="text-slate-400 text-sm lg:text-base mb-8 leading-relaxed">
+                        Your AI assistant can handle your entire lead intake process — so you never lose a job opportunity.
+                    </p>
+
+                    <div class="space-y-5">
+                        <div class="flex gap-4">
+                            <div class="w-10 h-10 rounded-lg bg-gold/10 border border-gold/20 flex items-center justify-center shrink-0 text-gold">
+                                <i class="fas fa-comment-dots text-sm"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-sm mb-1">Answer customer questions instantly</h4>
+                                <p class="text-xs text-slate-500">NLP-powered responses for plumbing emergencies, pricing, and availability.</p>
+                            </div>
+                        </div>
+                        <div class="flex gap-4">
+                            <div class="w-10 h-10 rounded-lg bg-gold/10 border border-gold/20 flex items-center justify-center shrink-0 text-gold">
+                                <i class="fas fa-user-check text-sm"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-sm mb-1">Qualify plumbing leads</h4>
+                                <p class="text-xs text-slate-500">Automatically filters out low-intent inquiries and prioritizes emergency calls.</p>
+                            </div>
+                        </div>
+                        <div class="flex gap-4">
+                            <div class="w-10 h-10 rounded-lg bg-gold/10 border border-gold/20 flex items-center justify-center shrink-0 text-gold">
+                                <i class="fas fa-calendar-check text-sm"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-sm mb-1">Schedule appointments</h4>
+                                <p class="text-xs text-slate-500">Syncs with ServiceTitan, Housecall Pro, and Jobber for live calendar booking.</p>
+                            </div>
+                        </div>
+                        <div class="flex gap-4">
+                            <div class="w-10 h-10 rounded-lg bg-gold/10 border border-gold/20 flex items-center justify-center shrink-0 text-gold">
+                                <i class="fas fa-moon text-sm"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-sm mb-1">Respond after business hours</h4>
+                                <p class="text-xs text-slate-500">Captures and books leads while you sleep — 24/7 coverage.</p>
+                            </div>
+                        </div>
+                        <div class="flex gap-4">
+                            <div class="w-10 h-10 rounded-lg bg-gold/10 border border-gold/20 flex items-center justify-center shrink-0 text-gold">
+                                <i class="fas fa-reply-all text-sm"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-sm mb-1">Follow up automatically</h4>
+                                <p class="text-xs text-slate-500">SMS and email sequences nurture leads until they book.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Chat Demo -->
+                <div class="relative">
+                    <div class="bg-navy-800/80 rounded-[2rem] border border-white/5 shadow-2xl overflow-hidden max-w-[400px] mx-auto relative z-10 glow-gold">
+                        <div class="bg-gradient-to-r from-gold to-gold-light p-5 flex items-center gap-4">
+                            <div class="w-11 h-11 rounded-full bg-white/20 backdrop-blur flex items-center justify-center">
+                                <i class="fas fa-robot text-white text-xl"></i>
+                            </div>
+                            <div>
+                                <p class="text-white font-bold leading-none text-sm">PlumbAI Assistant</p>
+                                <p class="text-[9px] text-white/70 uppercase tracking-widest font-bold mt-1">Online — Ready to help</p>
+                            </div>
+                        </div>
+
+                        <div id="demo-chat" class="h-[380px] p-5 overflow-y-auto space-y-4 text-xs">
+                            <div class="flex flex-col items-start max-w-[88%]">
+                                <div class="bg-navy-700 p-3 rounded-2xl rounded-tl-none text-slate-200">
+                                    Hi there! I'm your plumbing AI assistant. How can I help you today?
+                                </div>
+                                <span class="text-[8px] text-slate-600 mt-1 uppercase tracking-wider">Just now</span>
+                            </div>
+                        </div>
+
+                        <div class="p-4 bg-navy-900 border-t border-white/5 flex gap-2">
+                            <div class="flex-1 bg-navy-800 rounded-lg px-4 py-3 text-slate-500 italic text-xs">Type your plumbing needs...</div>
+                            <div class="w-11 h-11 rounded-lg bg-gold flex items-center justify-center">
+                                <i class="fas fa-paper-plane text-navy-950"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="absolute -bottom-10 -right-10 w-60 h-60 bg-gold/10 blur-[100px] -z-0"></div>
+                </div>
+            </div>
+
+            <div class="mt-16 text-center">
+                <p class="text-xs text-slate-500 max-w-xl mx-auto">
+                    <span class="text-gold font-bold">Strongest differentiator:</span> Most plumbing marketing agencies don't offer AI systems like this. We do.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- GEOGRAPHIC TARGETING -->
+    <section class="py-20 bg-navy-950 relative overflow-hidden">
+        <img src="https://res.cloudinary.com/dadofd9d2/image/upload/v1778233407/cinematic-ultra-wide-realistic-scene-of-a-professi_f05nem.jpg" alt="" class="absolute inset-0 w-full h-full object-cover opacity-60 pointer-events-none">
+        <div class="absolute inset-0 bg-navy-950/30"></div>
+        <div class="absolute top-0 left-0 w-full h-full bg-[radial-gradient(ellipse_at_center,rgba(212,175,55,0.03)_0%,transparent_70%)] pointer-events-none"></div>
+        <div class="max-w-5xl mx-auto px-6 text-center relative z-10">
+            <h2 class="font-display text-3xl lg:text-5xl font-bold mb-6">
+                Serving Plumbing Businesses Across <span class="text-gradient">USA & Canada</span>
+            </h2>
+            <p class="text-slate-400 mb-12 max-w-2xl mx-auto">
+                We help residential and commercial plumbing companies dominate their local markets with targeted digital campaigns.
+            </p>
+
+            <div class="grid sm:grid-cols-2 lg:grid-cols-5 gap-4">
+                <div class="glass-card rounded-xl px-5 py-6">
+                    <i class="fas fa-house-chimney text-2xl text-gold mb-3"></i>
+                    <h4 class="text-xs font-bold uppercase tracking-wider">Residential Plumbers</h4>
+                </div>
+                <div class="glass-card rounded-xl px-5 py-6">
+                    <i class="fas fa-building text-2xl text-gold mb-3"></i>
+                    <h4 class="text-xs font-bold uppercase tracking-wider">Commercial Plumbing</h4>
+                </div>
+                <div class="glass-card rounded-xl px-5 py-6">
+                    <i class="fas fa-truck-fast text-2xl text-gold mb-3"></i>
+                    <h4 class="text-xs font-bold uppercase tracking-wider">Emergency Services</h4>
+                </div>
+                <div class="glass-card rounded-xl px-5 py-6">
+                    <i class="fas fa-toilet text-2xl text-gold mb-3"></i>
+                    <h4 class="text-xs font-bold uppercase tracking-wider">Drain Cleaning</h4>
+                </div>
+                <div class="glass-card rounded-xl px-5 py-6 sm:col-span-2 lg:col-span-1">
+                    <i class="fas fa-wind text-2xl text-gold mb-3"></i>
+                    <h4 class="text-xs font-bold uppercase tracking-wider">HVAC & Plumbing</h4>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- PROCESS -->
+    <section id="process" class="py-20 lg:py-28 bg-navy-900/50 relative border-y border-white/5">
+        <div class="max-w-6xl mx-auto px-6">
+            <div class="text-center mb-16">
+                <h2 class="font-display text-3xl lg:text-5xl font-bold mb-4">
+                    Simple <span class="text-gradient">4-Step</span> Process
+                </h2>
+            </div>
+
+            <div class="grid md:grid-cols-4 gap-8">
+                <div class="relative pt-14">
+                    <div class="absolute top-0 left-0 text-6xl font-display font-black text-white/5">01</div>
+                    <div class="w-12 h-12 rounded-xl bg-gold/10 border border-gold/20 flex items-center justify-center text-gold mb-5">
+                        <i class="fas fa-phone"></i>
+                    </div>
+                    <h4 class="text-base font-bold mb-3">Free Strategy Call</h4>
+                    <p class="text-xs text-slate-500 leading-relaxed">We learn about your business, goals, and current marketing challenges.</p>
+                </div>
+                <div class="relative pt-14">
+                    <div class="absolute top-0 left-0 text-6xl font-display font-black text-white/5">02</div>
+                    <div class="w-12 h-12 rounded-xl bg-gold/10 border border-gold/20 flex items-center justify-center text-gold mb-5">
+                        <i class="fas fa-chart-bar"></i>
+                    </div>
+                    <h4 class="text-base font-bold mb-3">Market & Competitor Analysis</h4>
+                    <p class="text-xs text-slate-500 leading-relaxed">We identify gaps, opportunities, and high-intent keywords in your area.</p>
+                </div>
+                <div class="relative pt-14">
+                    <div class="absolute top-0 left-0 text-6xl font-display font-black text-white/5">03</div>
+                    <div class="w-12 h-12 rounded-xl bg-gold/10 border border-gold/20 flex items-center justify-center text-gold mb-5">
+                        <i class="fas fa-rocket"></i>
+                    </div>
+                    <h4 class="text-base font-bold mb-3">Campaign + Website Setup</h4>
+                    <p class="text-xs text-slate-500 leading-relaxed">We launch ads, build landing pages, and deploy your AI lead agent.</p>
+                </div>
+                <div class="relative pt-14">
+                    <div class="absolute top-0 left-0 text-6xl font-display font-black text-white/5">04</div>
+                    <div class="w-12 h-12 rounded-xl bg-gold/10 border border-gold/20 flex items-center justify-center text-gold mb-5">
+                        <i class="fas fa-arrow-trend-up"></i>
+                    </div>
+                    <h4 class="text-base font-bold mb-3">Lead Optimization & Scaling</h4>
+                    <p class="text-xs text-slate-500 leading-relaxed">We refine targeting, improve conversion rates, and scale what works.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FINAL CTA -->
+    <section id="contact" class="py-20 lg:py-28 bg-navy-950 relative overflow-hidden">
+        <img src="https://res.cloudinary.com/dadofd9d2/image/upload/v1778233841/cinematic-ultra-wide-shot-of-a-professional-plumbe_xgmqv2.jpg" alt="" class="absolute inset-0 w-full h-full object-cover opacity-40 pointer-events-none">
+        <div class="absolute inset-0 bg-navy-950/30"></div>
+        <div class="absolute inset-0 bg-gradient-to-br from-gold/5 via-transparent to-gold/5"></div>
+        <div class="max-w-4xl mx-auto px-6 relative z-10">
+            <div class="text-center mb-12">
+                <h2 class="font-display text-3xl lg:text-5xl font-bold mb-4">
+                    Ready To Generate More <span class="text-gradient">Plumbing Leads?</span>
+                </h2>
+                <p class="text-slate-400 max-w-2xl mx-auto">
+                    Book a free consultation and discover how paid ads, AI automation, and conversion-focused websites can grow your plumbing business.
+                </p>
+            </div>
+
+            <div class="max-w-2xl mx-auto p-8 lg:p-12 rounded-[2rem] border-gold relative" style="background: rgba(10, 20, 40, 0.7); backdrop-filter: blur(12px);">
+                <div class="absolute -top-10 -left-10 w-32 h-32 bg-gold/10 rounded-full blur-[60px]"></div>
+
+                <form onsubmit="handleForm(event)" class="space-y-5 relative" id="leadForm">
+                    <div class="grid sm:grid-cols-2 gap-5">
+                        <div>
+                            <label class="text-[9px] uppercase tracking-widest font-bold text-slate-500 px-1 mb-1 block">Name</label>
+                            <input type="text" required name="name" class="w-full bg-navy-900 border border-white/10 rounded-xl px-5 py-4 focus:border-gold outline-none transition-all text-sm" placeholder="Your name">
+                        </div>
+                        <div>
+                            <label class="text-[9px] uppercase tracking-widest font-bold text-slate-500 px-1 mb-1 block">Email</label>
+                            <input type="email" required name="email" class="w-full bg-navy-900 border border-white/10 rounded-xl px-5 py-4 focus:border-gold outline-none transition-all text-sm" placeholder="john@company.com">
+                        </div>
+                    </div>
+                    <div class="grid sm:grid-cols-2 gap-5">
+                        <div>
+                            <label class="text-[9px] uppercase tracking-widest font-bold text-slate-500 px-1 mb-1 block">Phone</label>
+                            <input type="tel" required name="phone" class="w-full bg-navy-900 border border-white/10 rounded-xl px-5 py-4 focus:border-gold outline-none transition-all text-sm" placeholder="(555) 123-4567">
+                        </div>
+                        <div>
+                            <label class="text-[9px] uppercase tracking-widest font-bold text-slate-500 px-1 mb-1 block">Service Needed</label>
+                            <select name="service" required class="w-full bg-navy-900 border border-white/10 rounded-xl px-5 py-4 focus:border-gold outline-none transition-all text-sm appearance-none text-slate-400">
+                                <option value="">Select a service</option>
+                                <option value="google-ads">Google Ads</option>
+                                <option value="bing-ads">Bing Ads</option>
+                                <option value="meta-ads">Meta Ads</option>
+                                <option value="website">Website Development</option>
+                                <option value="ai-chatbot">AI Chatbots</option>
+                                <option value="seo">SEO Services</option>
+                                <option value="full-stack">Full Stack</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div>
+                        <label class="text-[9px] uppercase tracking-widest font-bold text-slate-500 px-1 mb-1 block">Location</label>
+                        <input type="text" required name="location" class="w-full bg-navy-900 border border-white/10 rounded-xl px-5 py-4 focus:border-gold outline-none transition-all text-sm" placeholder="City, State / Province">
+                    </div>
+                    <div>
+                        <label class="text-[9px] uppercase tracking-widest font-bold text-slate-500 px-1 mb-1 block">Message</label>
+                        <textarea name="message" required rows="4" class="w-full bg-navy-900 border border-white/10 rounded-xl px-5 py-4 focus:border-gold outline-none transition-all text-sm resize-none" placeholder="Tell us about your business and goals..."></textarea>
+                    </div>
+                    <div class="pt-2">
+                        <button type="submit" class="w-full py-4 bg-gold text-navy-950 rounded-xl font-black text-base uppercase shadow-2xl shadow-gold/20 hover:shadow-gold/30 transition-all hover:-translate-y-0.5 active:scale-[0.98]">
+                            Schedule Free Consultation
+                        </button>
+                    </div>
+                </form>
+
+                <div id="success" class="hidden absolute inset-0 bg-navy-950/95 backdrop-blur flex flex-col items-center justify-center text-center p-12 rounded-[2rem] z-50">
+                    <div class="w-20 h-20 bg-gold text-navy-950 rounded-full flex items-center justify-center text-3xl mb-6">
+                        <i class="fas fa-check"></i>
+                    </div>
+                    <h3 class="font-display text-3xl font-bold mb-3">Request Received</h3>
+                    <p class="text-slate-400 text-sm max-w-sm">We'll review your business and reach out within 24 hours to schedule your free strategy call.</p>
+                    <button onclick="window.location.reload()" class="mt-6 text-gold font-bold uppercase tracking-widest text-xs">Back to top</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="py-12 border-t border-white/5 px-6">
+        <div class="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-center gap-8">
+            <div class="flex items-center gap-3">
+                <img src="https://res.cloudinary.com/dadofd9d2/image/upload/v1777959499/Damnart_new_and_final_logo_kpvdvr.png" alt="Digimarketing Art" class="w-8 h-8 rounded-lg object-cover">
+                <span class="font-display text-base font-bold tracking-tight">Digimarketing <span class="text-gold">Art</span></span>
+            </div>
+
+            <div class="flex flex-wrap justify-center gap-8 text-[10px] font-bold uppercase tracking-widest text-slate-500">
+                <a href="#services" class="hover:text-gold transition-colors">Services</a>
+                <a href="#why-us" class="hover:text-gold transition-colors">Why Us</a>
+                <a href="#process" class="hover:text-gold transition-colors">Process</a>
+                <a href="#contact" class="hover:text-gold transition-colors">Contact</a>
+            </div>
+
+            <div class="flex gap-3">
+                <a href="#" class="w-10 h-10 rounded-lg bg-navy-800 border border-white/5 flex items-center justify-center text-base text-slate-400 hover:text-gold hover:border-gold/30 transition-all">
+                    <i class="fab fa-linkedin"></i>
+                </a>
+                <a href="#" class="w-10 h-10 rounded-lg bg-navy-800 border border-white/5 flex items-center justify-center text-base text-slate-400 hover:text-gold hover:border-gold/30 transition-all">
+                    <i class="fab fa-x-twitter"></i>
+                </a>
+            </div>
+        </div>
+        <div class="mt-8 text-center text-[8px] uppercase tracking-[0.3em] text-slate-600">
+            &copy; 2025 DigiMarketing Art. Plumbing Growth Partners Across North America.
+        </div>
+    </footer>
+
+    <script>
+        // Nav Scroll Effect
+        window.addEventListener('scroll', () => {
+            const nav = document.getElementById('main-nav');
+            if (window.scrollY > 80) {
+                nav.classList.add('bg-navy-950/90', 'backdrop-blur-lg', 'py-1');
+                nav.classList.remove('py-3');
+            } else {
+                nav.classList.remove('bg-navy-950/90', 'backdrop-blur-lg', 'py-1');
+                nav.classList.add('py-3');
+            }
+        });
+
+        // Form Handling
+        function handleForm(e) {
+            e.preventDefault();
+            const form = document.getElementById('leadForm');
+            const success = document.getElementById('success');
+
+            form.style.filter = 'blur(4px)';
+            form.style.pointerEvents = 'none';
+
+            setTimeout(() => {
+                success.classList.remove('hidden');
+                success.classList.add('flex');
+            }, 1500);
+        }
+
+        // Demo Chat
+        const chat = document.getElementById('demo-chat');
+        const chatMessages = [
+            { type: 'bot', text: 'I see you\'re looking at burst pipe repair. Is this an emergency?' },
+            { type: 'user', text: 'Yes, water is leaking everywhere!' },
+            { type: 'bot', text: 'Understood. I have a technician 3 miles away. Can I schedule an immediate dispatch?' },
+        ];
+
+        let msgIndex = 0;
+        function startChat() {
+            if (msgIndex < chatMessages.length) {
+                setTimeout(() => {
+                    const msg = document.createElement('div');
+                    const isUser = chatMessages[msgIndex].type === 'user';
+                    msg.className = `flex flex-col ${isUser ? 'items-end self-end' : 'items-start'} max-w-[88%]`;
+                    msg.innerHTML = `
+                        <div class="${isUser ? 'bg-gold text-navy-950' : 'bg-navy-700 text-slate-200'} p-3 rounded-2xl ${isUser ? 'rounded-tr-none' : 'rounded-tl-none'} text-xs">
+                            ${chatMessages[msgIndex].text}
+                        </div>
+                    `;
+                    chat.appendChild(msg);
+                    chat.scrollTop = chat.scrollHeight;
+                    msgIndex++;
+                    startChat();
+                }, 2500);
+            }
+        }
+
+        // Observer for chat
+        const observer = new IntersectionObserver((entries) => {
+            if (entries[0].isIntersecting) {
+                startChat();
+                observer.unobserve(entries[0].target);
+            }
+        });
+        observer.observe(document.getElementById('ai-engine'));
+    </script>
+</body>
+</html>
